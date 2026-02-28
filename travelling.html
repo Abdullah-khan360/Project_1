@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #34495e;
+            font-weight: bold;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        
+        .radio-group {
+            margin-bottom: 20px;
+        }
+        
+        .radio-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 20px;
+        }
+        
+        .radio-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .note {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>✈️ Book Your Trip ✈️</h1>
+        
+        <form>
+            <!-- Destination Section -->
+            <h3>🌍 Where do you want to go?</h3>
+            
+            <label for="destination">Select Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="">-- Choose a destination --</option>
+                <option value="paris">Paris, France 🇫🇷</option>
+                <option value="dubai">Dubai, UAE 🇦🇪</option>
+                <option value="tokyo">Tokyo, Japan 🇯🇵</option>
+                <option value="newyork">New York, USA 🗽</option>
+                <option value="london">London, UK 🇬🇧</option>
+            </select>
+            
+            <!-- Dates Section -->
+            <h3>📅 Travel Dates</h3>
+            
+            <label for="departure">Departure Date:</label>
+            <input type="date" id="departure" name="departure" required>
+            
+            <label for="return">Return Date:</label>
+            <input type="date" id="return" name="return" required>
+            
+            <!-- Passenger Information -->
+            <h3>👤 Passenger Information</h3>
+            
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+            
+            <label for="passengers">Number of Passengers:</label>
+            <input type="number" id="passengers" name="passengers" min="1" max="10" value="1" required>
+            
+            <!-- Travel Class -->
+            <h3>💺 Travel Class</h3>
+            
+            <div class="radio-group">
+                <input type="radio" id="economy" name="class" value="economy" checked>
+                <label for="economy">Economy 💺</label>
+                
+                <input type="radio" id="business" name="class" value="business">
+                <label for="business">Business 💼</label>
+                
+                <input type="radio" id="first" name="class" value="first">
+                <label for="first">First Class 👑</label>
+            </div>
+            
+            <!-- Special Requests -->
+            <h3>📝 Special Requests</h3>
+            
+            <label for="requests">Any special requirements?</label>
+            <textarea id="requests" name="requests" rows="4" placeholder="Dietary restrictions, medical needs, etc."></textarea>
+            
+            <!-- Submit Button -->
+            <button type="submit">🔍 Search Available Trips</button>
+        </form>
+        
+        <div class="note">
+            * All fields are required unless marked optional
+        </div>
+    </div>
+    <a href="http://127.0.0.1:5500/Recipe.html"><h1>Recipe</h1></a>
+</body>
+</html>
